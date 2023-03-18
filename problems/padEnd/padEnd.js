@@ -1,8 +1,7 @@
 
 function padEnd(phrase, minLength, extra) { 
   // Add any parameters you need. Good luck!
-  let phraseToArr = phrase.split(' ');
-
+  let phraseToArr = phrase.split('');
 
   if (minLength <= phrase.length) {
     return phrase;
@@ -15,21 +14,15 @@ function padEnd(phrase, minLength, extra) {
     };
   };
 
-  if(extra !== undefined) {
-    let extraWord = extra.split('');
-    let pushWord = '';
+  let i = 0;
+  while(phraseToArr.length !== minLength) {
+    if(i >= extra.length) {
+      i = 0;
+    }
 
-    for (let i = 0; i < phrase.length; i++) {
-      
-      console.log(extraWord[i]);
-      pushWord += extraWord[i];
-
-    };
-
-    console.log(pushWord);
-    return phraseToArr.concat(pushWord);
+    phraseToArr.push(extra[i]);
+    i++;
   };
 
-  // console.log(phraseToArr, phraseToArr.join(''));
   return phraseToArr.join('');
 }

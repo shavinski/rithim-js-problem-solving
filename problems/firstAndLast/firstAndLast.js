@@ -7,6 +7,5 @@ function firstAndLast(words) {
     result.push(word[0] + word[word.length-1]);
   });
 
-  console.log(result);
   return result;
 }

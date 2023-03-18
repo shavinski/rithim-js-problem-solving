@@ -1,13 +1,20 @@
 
-function createMatrix(numCols, numRows) { 
+function createMatrix(numCols, numRows) {    // rows are copies of cols
   // Add any parameters you need. Good luck!
-  const result = [];
+  const colArr = [];
+  const rowArr = colArr;
 
-  for (let i = 0; i < numRows; i++) {
-    result.push([0]);
+  if (numCols === 0 && numRows === 0) {
+    return [];
   };
 
-  console.log(result);
-  return result;
+  for (let i = 0; i < numCols; i++) {
+    colArr.push(0);
+  };
 
-}
+  if (numRows === 1) {
+    return [colArr];
+  } else {
+    return [colArr, rowArr]
+  };
+};

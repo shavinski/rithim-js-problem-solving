@@ -2,7 +2,7 @@
 function hasNoDuplicates(nums) {                                      
   // Add any parameters you need. Good luck!
 
-  return nums.every((num, index) => {nums.indexOf(num) === index});   
+  return nums.every((num, index) => nums.indexOf(num) === index);   
 };
 
 
@@ -11,6 +11,6 @@ function hasNoDuplicates(nums) {
 // function hasNoDuplicates(nums) {                                      
 //   // Add any parameters you need. Good luck!
 //   const numsSet = new Set(nums);
-
+//   console.log(numsSet);
 //   return nums.length === numsSet.size;
 // };

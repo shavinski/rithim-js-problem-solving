@@ -10,8 +10,8 @@ function aperture(n, items) {
   let index = 0;
   let subArr = [];
 
-  while(index < items.length - 1) {
-    console.log('working');
+  while(index < items.length - 1) {  // 0 < 4 true
+    console.log('working');          // 
     if (subArr.length < n) {
       subArr.push(items[index]);
       break;
