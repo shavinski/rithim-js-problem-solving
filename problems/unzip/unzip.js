@@ -1,18 +1,20 @@
 
-function unzip([[nRows], [nCol]]) { 
+function unzip(matrix) { 
   // Add any parameters you need. Good luck!
-  // console.log(nRows, nCol);
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
   const result = [];
 
-  // if(nRows.length === 1) {
-    
-  // }
-
-  for (let i = 0; i < nRows.length; i++) {
-    // console.log(nRows[i], nCol[i]);
-    result.push([nRows[i], nCol[i]]);
+  for (let i = 0; i < numCols; i++) {
+    const newRow = [];
+    for (let j = 0; j < numRows; j++) {
+      newRow.push(matrix[j][i]);
+    };
+    result.push(newRow);
   };
 
-  // console.log(result);
   return result;
 };
+
+
+//broke my brain 
